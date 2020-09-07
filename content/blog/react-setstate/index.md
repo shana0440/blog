@@ -3,6 +3,7 @@
 title: react setState
 date: "2020-07-20T17:06:44.156Z"
 description: "just some logs"
+tags: ["react", "state"]
 ---
 
 今天在工作的時候，公司的 junior developer 寫出了一段程式，讓我覺得可以記錄一下，算是一個滿經典的錯誤，可以用來鑒別對於 react 的一些知識。
@@ -24,12 +25,13 @@ const FilesUpload = () => {
   const [files, setFiles] = useState<FileRecord[]>([])
   useEffect(() => {
     const listener = filePath => {
+      // problematic code
       setFiles(prev => {
         return prev.map(it =>
           it.path == filePath ? { ...it, isDone: true } : it
         )
       })
-      // problematic code
+      // the files we have here, still is the data before setFiles
       const isAllFileUploaded = files.reduce(
         (acc, it) => acc && it.isDone,
         true

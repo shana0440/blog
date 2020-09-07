@@ -2,6 +2,7 @@
 title: Deep in to BLoC
 date: "2020-03-08T23:55:34.074Z"
 description: "introduce BLoC pattern and the problem I encounter"
+tags: ["flutter", "state", "bloc"]
 ---
 
 目前手上的專案是採用 BLoC Pattern，當初採用這個 Pattern 的理由滿簡單的，就是網路上滿多人推薦，而且我不喜歡 redux，因為太多 boilerplate。

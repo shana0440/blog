@@ -2,6 +2,7 @@
 title: Typescript type override
 date: "2020-06-26T19:10:17.011Z"
 description: "A problem when I try to override the default type definition"
+tags: ["typescript", "ts", "union type"]
 ---
 
 這個問題是我在開發 nodejs 的時候，我想要 override `koa` 的 `request.body`，來讓他支援 type 所遇到的問題。
@@ -29,6 +30,8 @@ interface BodyContext<T> extends Koa.Context {
   request: MyRequest<T>
 }
 
+// The problem is because we union the ConfigContext and BodyContext
+// but the body in ConfigContext is `any`, it conflict with the body in BodyContext
 const handler: Handler<ConfigContext & BodyContext<{ username: string }>> {
   handle(ctx) {
     console.log(ctx.request.body.username) // ctx.request.body is any
