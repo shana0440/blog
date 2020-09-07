@@ -13,6 +13,7 @@ const template = `
 title: ${title}
 date: "${new Date().toISOString()}"
 description: "here is your description"
+tags: []
 ---
 
 Start typing something
