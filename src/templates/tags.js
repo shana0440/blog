@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import { rhythm } from "../utils/typography"
+import Post from "../components/post"
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
@@ -17,32 +17,9 @@ const Tags = ({ pageContext, data, location }) => {
     <Layout location={location} title={siteTitle}>
       <article>
         <h1>{tagHeader}</h1>
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        {edges.map(({ node }) => (
+          <Post node={node} />
+        ))}
       </article>
     </Layout>
   )
