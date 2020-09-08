@@ -3,7 +3,7 @@ private: true
 title: state control
 date: "2020-06-30T05:13:43.675Z"
 description: "A tip about code readability"
-tags: ["flutter", "state"]
+tags: ["flutter", "state", "code quality"]
 ---
 
 起因是這樣的，我們有個 list view ，需要處理 loading, display 的 state，下面是我的作法。
@@ -58,3 +58,7 @@ _fetchFeeds([int cursor = 0]) {
   }
 }
 ```
+
+## Conclusion
+
+簡單來說，就是盡量讓 state change 在同一個 function 內完成，讓其他 function 為 pure function。
