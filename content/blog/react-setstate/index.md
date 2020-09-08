@@ -1,5 +1,5 @@
 ---
-# TODO: private
+private: true
 title: react setState
 date: "2020-07-20T17:06:44.156Z"
 description: "just some logs"

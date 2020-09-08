@@ -1,5 +1,5 @@
 ---
-# TODO: private
+private: true
 title: state control
 date: "2020-06-30T05:13:43.675Z"
 description: "A tip about code readability"

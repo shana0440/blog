@@ -1,5 +1,5 @@
 ---
-# TODO: private
+private: true
 title: AWS ECS
 date: "2020-06-10T12:46:51.463Z"
 description: "I Hate AWS ECS"
