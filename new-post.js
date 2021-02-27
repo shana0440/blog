@@ -17,6 +17,9 @@ tags: []
 ---
 
 Start typing something
+
+## References
+
 `
 
 const postPath = path.resolve(dirPath, "index.md")
