@@ -14,6 +14,7 @@ title: ${title}
 date: "${new Date().toISOString()}"
 description: "here is your description"
 tags: []
+private: true
 ---
 
 Start typing something
