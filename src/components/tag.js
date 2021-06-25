@@ -13,13 +13,13 @@ const Container = styled.span`
   a {
     color #4f4f4f;
     box-shadow: none;
-  }
+  }
 `
 
 const Tag = ({ tag }) => {
   return (
     <Container>
-      <Link to={`tags/${toSlug(tag)}`}>{tag}</Link>
+      <Link to={`/tags/${toSlug(tag)}`}>{tag}</Link>
     </Container>
   )
 }
