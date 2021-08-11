@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.title}
           </h1>
           {post.frontmatter.tags &&
-            post.frontmatter.tags.map(it => <Tag tag={it} />)}
+            post.frontmatter.tags.map((it, i) => <Tag key={i} tag={it} />)}
           <p
             style={{
               ...scale(-1 / 5),
