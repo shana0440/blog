@@ -17,7 +17,7 @@ ObservableInterval(
   TimeUnit.MINUTES,
   Schedulers.io()
 ).map {
-  doSync()
+  doSync() // This is Observable
 }.map {
   Result.Success
 }.onErrorResumeNext { e: Throwable ->
@@ -30,7 +30,7 @@ ObservableInterval(
 }
 ```
 
-一但執行失敗就會掛掉的原因在於錯誤在最外層的 Observer 處理，一但 Observer 出現 error ，這個 Observer 就會停住，要解決這個問題，就要在裡面處理好錯誤，讓錯誤不要傳到外面來。
+一但執行失敗就會掛掉的原因在於錯誤在最外層的 Observer 處理，一但 `doSync` 出現 error ，外面的 Observer 就會停住，要解決這個問題，就要在裡面處理好錯誤，讓錯誤不要傳到外面來。
 
 ```kotlin
 ObservableInterval(
