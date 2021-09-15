@@ -17,7 +17,17 @@ tags: []
 private: true
 ---
 
-Start typing something
+## What is the problem
+
+## How to solve it
+
+## The best solution or practice
+
+## The mechanism, key techniques, and source code
+
+# Pros/Cons
+
+## Conclusion
 
 ## References
 
