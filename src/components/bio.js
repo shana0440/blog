@@ -17,6 +17,9 @@ const Bio = () => {
         site {
           siteMetadata {
             description
+            social {
+              github
+            }
           }
         }
       }
@@ -24,12 +27,14 @@ const Bio = () => {
   )
 
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <div>
+      <ul style={{ listStyle: "none", display: "grid" }}>
+        <li>
+          <a target="_blank" href={site.siteMetadata.social.github}>
+            Github
+          </a>
+        </li>
+      </ul>
       <p>{site.siteMetadata.description}</p>
     </div>
   )

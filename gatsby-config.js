@@ -4,9 +4,9 @@ module.exports = {
     title: `KWGUO Blog`,
     author: `KWGUO`,
     description: `Do not believe any post in here, those basically is wrong, and any correction is welcome`,
-    siteUrl: `https://kwguo.me`,
+    siteUrl: `https://blog.kwguo.me`,
     social: {
-      twitter: ``,
+      github: `https://github.com/shana0440`,
     },
   },
   plugins: [
