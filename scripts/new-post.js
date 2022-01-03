@@ -4,7 +4,7 @@ const path = require("path")
 const title = process.argv[2]
 const dirName = title.toLocaleLowerCase().replace(/\s/g, "-")
 
-const dirPath = path.resolve(__dirname, "content", "blog", dirName)
+const dirPath = path.resolve(__dirname, "..", "content", "blog", dirName)
 
 fs.mkdirSync(dirPath)
 
