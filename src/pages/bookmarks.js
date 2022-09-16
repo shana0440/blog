@@ -6,14 +6,14 @@ import SEO from "../components/seo"
 import Post from "../components/post"
 import useKeepScrollPosition from "../hooks/useKeepScrollPosition"
 
-const WritingsIndex = ({ children }) => {
-  const scrollRestoration = useKeepScrollPosition("writings-list")
+const BookmarksIndex = ({ children }) => {
+  const scrollRestoration = useKeepScrollPosition("bookmarks-list")
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: {
-          frontmatter: { private: { ne: true }, tags: { in: ["writing"] } }
+          frontmatter: { private: { ne: true }, tags: { in: ["bookmark"] } }
         }
       ) {
         edges {
@@ -39,12 +39,12 @@ const WritingsIndex = ({ children }) => {
       <SEO title="My writings" />
       <div className="flex">
         <ul
-          className="flex flex-col gap-2 h-screen overflow-auto w-96 p-2 border-r border-r-gray-300"
+          className="flex flex-col gap-4 h-screen overflow-auto w-96 p-2 border-r border-r-gray-300"
           {...scrollRestoration}
         >
           {posts.map(({ node }, i) => (
-            <li key={i}>
-              <Post to={`/writings${node.fields.slug}`} node={node} />
+            <li key={i} className="rounded-md py-1 px-2 mb-1 hover:bg-gray-100">
+              <Post to={`/bookmarks${node.fields.slug}`} node={node} />
             </li>
           ))}
         </ul>
@@ -54,4 +54,4 @@ const WritingsIndex = ({ children }) => {
   )
 }
 
-export default WritingsIndex
+export default BookmarksIndex

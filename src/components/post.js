@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Post = ({ node }) => {
+const Post = ({ node, to }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
     <Link
-      to={`/writings${node.fields.slug}`}
+      to={to}
       className="rounded-md py-1 px-2 mb-1 hover:bg-gray-100 block"
       activeClassName="bg-gray-100"
     >

@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const bookmark = path.resolve(`./src/templates/bookmark.js`)
   const tagsPage = path.resolve("src/templates/tags.js")
   const result = await graphql(
     `
@@ -15,11 +16,31 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
 
-        allMarkdownRemark(
+        writings: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
           filter: {
             frontmatter: { private: { ne: true }, tags: { in: ["writing"] } }
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
+              }
+            }
+          }
+        }
+
+        bookmarks: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: {
+            frontmatter: { private: { ne: true }, tags: { in: ["bookmark"] } }
           }
         ) {
           edges {
@@ -43,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = result.data.writings.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -52,6 +73,24 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/writings${post.node.fields.slug}`,
       component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
+    })
+  })
+
+  // Create bookmark pages.
+  const bookmarks = result.data.bookmarks.edges
+
+  bookmarks.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: `/bookmarks${post.node.fields.slug}`,
+      component: bookmark,
       context: {
         slug: post.node.fields.slug,
         previous,
