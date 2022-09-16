@@ -12,7 +12,9 @@ const WritingsIndex = ({ children }) => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { private: { ne: true } } }
+        filter: {
+          frontmatter: { private: { ne: true }, tags: { in: ["writing"] } }
+        }
       ) {
         edges {
           node {
