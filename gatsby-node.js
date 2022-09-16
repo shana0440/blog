@@ -18,7 +18,9 @@ exports.createPages = async ({ graphql, actions }) => {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { frontmatter: { private: { ne: true } } }
+          filter: {
+            frontmatter: { private: { ne: true }, tags: { in: ["writing"] } }
+          }
         ) {
           edges {
             node {
@@ -48,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
-      path: post.node.fields.slug,
+      path: `/writings${post.node.fields.slug}`,
       component: blogPost,
       context: {
         slug: post.node.fields.slug,
