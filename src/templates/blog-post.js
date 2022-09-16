@@ -38,14 +38,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <ul className="flex flex-wrap justify-between list-none p-0">
               <li>
                 {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
+                  <Link to={`/writings${previous.fields.slug}`} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={next.fields.slug} rel="next">
+                  <Link to={`/writings${next.fields.slug}`} rel="next">
                     {next.frontmatter.title} →
                   </Link>
                 )}
