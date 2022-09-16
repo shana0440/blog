@@ -62,6 +62,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "post::new": "node ./scripts/new-post.js",
+    "bookmark::new": "node ./scripts/new-bookmark.js",
     "tag::list": "node ./scripts/list-tags.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }

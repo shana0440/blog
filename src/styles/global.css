@@ -9,3 +9,7 @@
 .filling-item .filling {
   @apply flex-1 border-t border-dashed border-gray-400;
 }
+
+.visit-link {
+  @apply rounded-md no-underline text-center bg-slate-100 border border-slate-300 text-slate-500 flex gap-2 justify-center py-1 hover:bg-slate-200;
+}
