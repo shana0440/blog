@@ -2,7 +2,7 @@
 title: flutter setState
 date: "2020-05-04T22:45:49.832Z"
 description: "Some note for flutter setState"
-tags: ["flutter", "state"]
+tags: ["writing", "flutter", "state"]
 ---
 
 會寫這篇，主要是在公司的專案看到了下面這種寫法。

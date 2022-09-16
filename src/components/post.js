@@ -2,32 +2,21 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { rhythm } from "../utils/typography"
-
-const Post = ({ node }) => {
+const Post = ({ node, to }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
-    <article key={node.fields.slug}>
-      <header>
-        <h3
-          style={{
-            marginBottom: rhythm(1 / 4),
-          }}
-        >
-          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-            {title}
-          </Link>
-        </h3>
-        <small>{node.frontmatter.date}</small>
-      </header>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: node.frontmatter.description || node.excerpt,
-          }}
-        />
-      </section>
-    </article>
+    <Link
+      to={to}
+      className="rounded-md py-1 px-2 mb-1 hover:bg-gray-100 block"
+      activeClassName="bg-gray-100"
+    >
+      <article key={node.fields.slug}>
+        <header>
+          <h3>{title}</h3>
+          <small>{node.frontmatter.date}</small>
+        </header>
+      </article>
+    </Link>
   )
 }
 

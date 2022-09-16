@@ -2,7 +2,7 @@
 title: The rule of using edittext on recyclerview
 date: "2021-08-07T18:57:11.765Z"
 description: "My experience of edittext on recyclerview"
-tags: ["android", "recyclerview"]
+tags: ["writing", "android", "recyclerview"]
 private: true
 ---
 

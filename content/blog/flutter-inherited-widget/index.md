@@ -2,7 +2,7 @@
 title: Flutter Inherited Widget
 date: "2020-03-01T23:53:28.409Z"
 description: "Deep in to inherited widget"
-tags: ["flutter", "state", "inherited widget"]
+tags: ["writing", "flutter", "state", "inherited widget"]
 ---
 
 我在目前的專案，都是使用 stream 來儲存資料，讓各個 bloc 來監聽 stream 並輸出不同的 state，而我在 twitter 上看到一篇[文章](https://zonble.github.io/2019/12/07/what-if-states-are-out-of-flutter-widget-tree.html)說使用 stream 來觸發 rebuild 會造成多餘的 build，文章內建議使用 `InheritedWidget` 來處理這種 global state 的問題，而 `InheritedWidget` 對我來說有一個問題，就是他必須依賴 `context` 來獲得，這也因此激起我的興趣，想來研究一下 `InheritedWidget` 到底是怎麼運作的。

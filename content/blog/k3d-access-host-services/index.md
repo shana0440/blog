@@ -2,7 +2,7 @@
 title: k3d access host services
 date: "2021-01-10T22:46:21.968Z"
 description: "Just a record"
-tags: ["docker", "k8s", "k3d"]
+tags: ["writing", "docker", "k8s", "k3d"]
 ---
 
 一般來說，我們不會將 database 這種資料放在 k8s 上面，這也延伸出一個問題，當我們要在 local setup k8s 的環境時，就會少了 database 等需要 persistent 特性的服務。

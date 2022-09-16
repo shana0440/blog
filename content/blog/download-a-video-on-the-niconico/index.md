@@ -2,7 +2,7 @@
 title: Download a video on the niconico
 date: "2021-10-13T10:48:55.178Z"
 description: "A post describe how to download a video on niconico"
-tags: ["HLS"]
+tags: ["writing", "HLS"]
 private: true
 ---
 

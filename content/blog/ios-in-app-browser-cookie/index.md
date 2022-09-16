@@ -2,7 +2,7 @@
 title: iOS in app browser cookie
 date: "2021-01-10T22:38:53.942Z"
 description: "Just a record"
-tags: ["cookie", "ios", "webview"]
+tags: ["writing", "cookie", "ios", "webview"]
 ---
 
 先說結論，當使用 `SFSafariViewController` 的時候，就沒辦法使用 Cookie 。要用 Cookie 的話請使用 `UIWebView` or `WKWebView`。

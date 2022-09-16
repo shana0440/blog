@@ -2,7 +2,7 @@
 title: React-Native fast image android bug
 date: "2021-05-29T10:57:10.453Z"
 description: "Error while updating property 'source' of a view managed by: FastImageView"
-tags: ["react-native", "android", "fast-image", "bugs"]
+tags: ["writing", "react-native", "android", "fast-image", "bugs"]
 private: true
 ---
 

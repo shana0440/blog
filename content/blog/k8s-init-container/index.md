@@ -2,7 +2,7 @@
 title: k8s init container
 date: "2021-01-10T22:58:00.878Z"
 description: "Just a record"
-tags: ["k8s"]
+tags: ["writing", "k8s"]
 ---
 
 在目前的專案中，有個需求是想要把 static files 上傳到 s3 上，而我們的 static file 每次 build 的 hash code 都會不一樣，所以每次跑 CI/CD 都要重新上傳一次，在這個專案中，我採取的作法是建立一個 k8s job ，讓這個 job 負責上傳 static files。

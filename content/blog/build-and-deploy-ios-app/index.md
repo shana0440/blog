@@ -2,7 +2,7 @@
 title: Build and Deploy iOS app
 date: "2020-02-29T06:31:43.877Z"
 description: "How to create a ipa and upload to itunes connect"
-tags: ["flutter", "ios", "deployment", "app store", "sign"]
+tags: ["writing", "flutter", "ios", "deployment", "app store", "sign"]
 ---
 
 由於最近工作上在寫 Flutter，而最近這專案差不多要結束了，所以負責把這個 app 上架到 app store 上，中間也是遇到不少令人疑惑的問題，因此在這邊紀錄一下，將來有機會遇到的時候，應該比較容易回憶起來。

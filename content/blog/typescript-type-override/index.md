@@ -2,7 +2,7 @@
 title: Typescript type override
 date: "2020-06-26T19:10:17.011Z"
 description: "A problem when I try to override the default type definition"
-tags: ["typescript", "ts", "union type"]
+tags: ["writing", "typescript", "ts", "union type"]
 ---
 
 這個問題是我在開發 nodejs 的時候，我想要 override `koa` 的 `request.body`，來讓他支援 type 所遇到的問題。

@@ -2,7 +2,7 @@
 title: Import private key to ssh-agent
 date: "2021-08-11T17:01:52.208Z"
 description: "How to avoid ssh keep asking passphrase"
-tags: ["ssh", "linux", "devops"]
+tags: ["writing", "ssh", "linux", "devops"]
 private: false
 ---
 

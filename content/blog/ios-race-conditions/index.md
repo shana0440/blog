@@ -2,7 +2,7 @@
 title: iOS race conditions
 date: "2021-08-31T16:44:54.801Z"
 description: "About the race condition in iOS"
-tags: ["ios", "swift"]
+tags: ["writing", "ios", "swift"]
 private: false
 ---
 

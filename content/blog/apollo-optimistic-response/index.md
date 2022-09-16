@@ -2,7 +2,7 @@
 title: Apollo Optimistic Response
 date: "2021-05-29T10:04:21.236Z"
 description: "When optimistic response not works"
-tags: ["graphql", "apollo", "react", "mutation", "ux"]
+tags: ["writing", "graphql", "apollo", "react", "mutation", "ux"]
 private: false
 ---
 

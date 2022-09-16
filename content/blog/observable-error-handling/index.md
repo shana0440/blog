@@ -2,7 +2,7 @@
 title: Observable error handling
 date: "2021-04-17T05:24:45.065Z"
 description: "Be careful when handle observable error"
-tags: ["rx"]
+tags: ["writing", "rx"]
 private: false
 ---
 

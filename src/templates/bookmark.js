@@ -3,14 +3,14 @@ import { Link, graphql } from "gatsby"
 
 import Seo from "../components/seo"
 import Tag from "../components/tag"
-import WritingsIndex from "../pages/writings"
+import BookmarksIndex from "../pages/bookmarks"
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BookmarkTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
 
   return (
-    <WritingsIndex>
+    <BookmarksIndex>
       <Seo
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
@@ -54,14 +54,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </nav>
         </div>
       </div>
-    </WritingsIndex>
+    </BookmarksIndex>
   )
 }
 
-export default BlogPostTemplate
+export default BookmarkTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BookmarkBySlug($slug: String!) {
     site {
       siteMetadata {
         title

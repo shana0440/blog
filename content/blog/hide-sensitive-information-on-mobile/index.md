@@ -2,7 +2,7 @@
 title: Hide sensitive information on mobile
 date: "2020-12-16T15:34:27.518Z"
 description: "How to hide sensitive information on mobile"
-tags: ["ios", "android"]
+tags: ["writing", "ios", "android"]
 ---
 
 在 Android 如果我們希望讓使用者不能在輸入帳戶密碼之類的機密訊息的頁面上截圖，我們可以使用下面的方法。
