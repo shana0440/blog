@@ -36,7 +36,7 @@ const BookmarksIndex = ({ children }) => {
 
   return (
     <Layout>
-      <SEO title="My writings" />
+      <SEO title="Bookmarks" />
       <div className="flex">
         <ul
           className="flex flex-col gap-4 h-screen overflow-auto w-96 p-2 border-r border-r-gray-300"
