@@ -39,7 +39,7 @@ const WritingsIndex = ({ children }) => {
       <SEO title="My writings" />
       <div className="flex">
         <ul
-          className="flex flex-col gap-2 h-screen overflow-auto w-96 p-2 border-r border-r-gray-300"
+          className="flex flex-col gap-1 h-screen overflow-auto w-96 px-2 py-4 border-r border-r-gray-300"
           {...scrollRestoration}
         >
           {posts.map(({ node }, i) => (

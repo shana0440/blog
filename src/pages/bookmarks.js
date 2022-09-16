@@ -39,11 +39,11 @@ const BookmarksIndex = ({ children }) => {
       <SEO title="Bookmarks" />
       <div className="flex">
         <ul
-          className="flex flex-col gap-4 h-screen overflow-auto w-96 p-2 border-r border-r-gray-300"
+          className="flex flex-col gap-1 h-screen overflow-auto w-96 px-2 py-4 border-r border-r-gray-300"
           {...scrollRestoration}
         >
           {posts.map(({ node }, i) => (
-            <li key={i} className="rounded-md py-1 px-2 mb-1 hover:bg-gray-100">
+            <li key={i}>
               <Post to={`/bookmarks${node.fields.slug}`} node={node} />
             </li>
           ))}
