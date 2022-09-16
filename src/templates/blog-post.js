@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Seo from "../components/seo"
 import Tag from "../components/tag"
 import WritingsIndex from "../pages/writings"
@@ -18,7 +17,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <div className="h-screen overflow-auto">
-        <div className="py-24 px-5 max-w-3xl mx-auto">
+        {/* 65ch is follow the prose max width settings */}
+        <div className="py-24 px-5 max-w-[65ch] mx-auto">
           <article>
             <header className="mb-10">
               <h1 className="font-bold text-3xl mb-3">
@@ -32,12 +32,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               className="prose prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-base"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            <hr />
-            <footer>
-              <Bio />
-            </footer>
           </article>
-
+          <hr className="my-5" />
           <nav>
             <ul className="flex flex-wrap justify-between list-none p-0">
               <li>
