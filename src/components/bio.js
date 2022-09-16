@@ -7,7 +7,6 @@
 
 import React from "react"
 
-import { rhythm } from "../utils/typography"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Bio = () => {
