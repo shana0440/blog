@@ -6,12 +6,13 @@ import {
   Writing,
   BrandGithub,
   ArrowUpRight,
+  BrandLinkedin,
 } from "tabler-icons-react"
 
 const Layout = ({ children }) => {
   return (
     <div className="flex">
-      <nav className="w-72 px-3 border-r border-r-gray-300">
+      <nav className="w-72 px-3 border-r border-r-gray-300 h-screen overflow-auto">
         <h3 className="font-bold px-2 mt-5 mb-10">kwguo</h3>
         <ul>
           <li>
@@ -47,6 +48,13 @@ const Layout = ({ children }) => {
             >
               Github
             </Item>
+            <Item
+              icon={<BrandLinkedin />}
+              to="https://www.linkedin.com/in/%E9%8E%A7%E7%91%8B-%E9%83%AD-8354aa116/"
+              newTab
+            >
+              LinkedIn
+            </Item>
           </li>
         </ul>
       </nav>
@@ -65,6 +73,7 @@ function Item({ children, icon, to, newTab = false }) {
       to={to}
       target={newTab ? "_blank" : "_self"}
       className="flex justify-between rounded-md py-1 px-2 mb-1 hover:bg-gray-100"
+      activeClassName="bg-gray-100"
     >
       <div className="flex gap-2">
         {icon}

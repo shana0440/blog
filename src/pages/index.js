@@ -1,22 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Post from "../components/post"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+const BlogIndex = ({ data }) => {
+  const post = data.markdownRemark
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }, i) => (
-        <Post key={i} node={node} />
-      ))}
+    <Layout>
+      <SEO title="Home" />
+      <div className="h-screen overflow-auto py-24 px-5">
+        <article
+          className="mx-auto prose prose-a:no-underline prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-base"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
     </Layout>
   )
 }
@@ -30,22 +29,15 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { private: { ne: true } } }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
+    markdownRemark(fields: { slug: { eq: "/home/" } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        tags
+        date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }
