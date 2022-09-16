@@ -5,23 +5,14 @@ import { Link } from "gatsby"
 const Post = ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug
   return (
-    <article key={node.fields.slug}>
-      <header>
-        <h3 style={{}}>
-          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-            {title}
-          </Link>
-        </h3>
-        <small>{node.frontmatter.date}</small>
-      </header>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: node.frontmatter.description || node.excerpt,
-          }}
-        />
-      </section>
-    </article>
+    <Link to={`/writings${node.fields.slug}`}>
+      <article key={node.fields.slug}>
+        <header>
+          <h3>{title}</h3>
+          <small>{node.frontmatter.date}</small>
+        </header>
+      </article>
+    </Link>
   )
 }
 

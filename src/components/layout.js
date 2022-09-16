@@ -8,12 +8,10 @@ import {
   ArrowUpRight,
 } from "tabler-icons-react"
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-
+const Layout = ({ children }) => {
   return (
     <div className="flex">
-      <nav className="w-72 px-3">
+      <nav className="w-72 px-3 border-r border-r-gray-300">
         <h3 className="font-bold px-2 mt-5 mb-10">kwguo</h3>
         <ul>
           <li>
@@ -56,7 +54,7 @@ const Layout = ({ location, title, children }) => {
           </li>
         </ul>
       </nav>
-      <main>{children}</main>
+      <div className="flex-1">{children}</div>
     </div>
   )
 }
@@ -70,7 +68,7 @@ function Item({ children, icon, to, newTab = false }) {
     <Link
       to={to}
       target={newTab ? "_blank" : "_self"}
-      className="flex justify-between shadow-none rounded-md py-1 px-2 mb-1 hover:bg-gray-100"
+      className="flex justify-between rounded-md py-1 px-2 mb-1 hover:bg-gray-100"
     >
       <div className="flex gap-2">
         {icon}
