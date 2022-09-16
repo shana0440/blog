@@ -1,11 +1,33 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from "../components/post"
 
-const WritingsIndex = ({ data, children }) => {
+const WritingsIndex = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { private: { ne: true } } }
+      ) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+            }
+          }
+        }
+      }
+    }
+  `)
   const posts = data.allMarkdownRemark.edges
 
   return (
@@ -26,31 +48,3 @@ const WritingsIndex = ({ data, children }) => {
 }
 
 export default WritingsIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { private: { ne: true } } }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
