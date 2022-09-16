@@ -2,8 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Tag from "../components/tag"
 import WritingsIndex from "../pages/writings"
 
@@ -13,64 +12,51 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <WritingsIndex>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div className="p-2 max-w-3xl mx-auto h-screen overflow-auto">
-        <article>
-          <header>
-            <h1
-              style={{
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            {post.frontmatter.tags &&
-              post.frontmatter.tags.map((it, i) => <Tag key={i} tag={it} />)}
-            <p
-              style={{
-                display: `block`,
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr style={{}} />
-          <footer>
-            <Bio />
-          </footer>
-        </article>
+      <div className="h-screen overflow-auto">
+        <div className="py-24 px-5 max-w-3xl mx-auto">
+          <article>
+            <header className="mb-10">
+              <h1 className="font-bold text-3xl mb-3">
+                {post.frontmatter.title}
+              </h1>
+              <p>{post.frontmatter.date}</p>
+              {post.frontmatter.tags &&
+                post.frontmatter.tags.map((it, i) => <Tag key={i} tag={it} />)}
+            </header>
+            <section
+              className="prose prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-base"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+            <hr />
+            <footer>
+              <Bio />
+            </footer>
+          </article>
 
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+          <nav>
+            <ul className="flex flex-wrap justify-between list-none p-0">
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </WritingsIndex>
   )

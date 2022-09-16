@@ -36,6 +36,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.11",
     "gatsby-plugin-postcss": "^5.23.0",
     "postcss": "^8.4.16",
