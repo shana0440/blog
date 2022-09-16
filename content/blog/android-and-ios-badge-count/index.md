@@ -2,7 +2,7 @@
 title: Android and iOS badge count
 date: "2021-09-26T06:48:22.499Z"
 description: "The difference between Android and iOS badge count"
-tags: ["android", "ios", "badge count", "notification"]
+tags: ["writing", "android", "ios", "badge count", "notification"]
 private: false
 ---
 

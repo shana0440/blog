@@ -2,7 +2,7 @@
 title: flutter IntrinsicHeight
 date: "2020-05-06T18:25:52.192Z"
 description: "A brief introduction about IntrinsicHeight"
-tags: ["flutter", "dynamic height"]
+tags: ["writing", "flutter", "dynamic height"]
 ---
 
 今天來介紹一下 `IntrinsicHeight` 這個官方說很好用但不要常用的 widget 。

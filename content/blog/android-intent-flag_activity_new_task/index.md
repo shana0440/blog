@@ -2,7 +2,7 @@
 title: Android Intent FLAG_ACTIVITY_NEW_TASK
 date: "2020-03-08T18:10:18.791Z"
 description: "A brief introduction about Android task, activity, intent"
-tags: ["android", "intent"]
+tags: ["writing", "android", "intent"]
 ---
 
 最近在專案遇到一個對 Android Developer 滿基礎的問題吧，無奈開發 App 一直都不是我的強項（不知道為什麼現在都在開發 App），也是在這問題上折騰了許久，所以打算來了解一下 Android 的一些相關知識。

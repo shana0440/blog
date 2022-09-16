@@ -2,7 +2,7 @@
 title: android deeplink
 date: "2021-02-03T05:27:33.352Z"
 description: "Just a note for handle deeplink on android"
-tags: ["android", "deeplink"]
+tags: ["writing", "android", "deeplink"]
 ---
 
 We have a silly problem in current project, our deeplink can work on iOS but not in android.

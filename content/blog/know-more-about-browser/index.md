@@ -2,7 +2,7 @@
 title: know-more-about-browser
 date: "2022-01-03T04:58:24.070Z"
 description: "Some browser behavior and js knowledge I should know"
-tags: ["js", "browser"]
+tags: ["writing", "js", "browser"]
 private: true
 ---
 

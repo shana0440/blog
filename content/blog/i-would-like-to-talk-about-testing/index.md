@@ -2,7 +2,7 @@
 title: I would like to talk about testing
 date: "2021-08-07T15:07:56.924Z"
 description: "My personal opinion about testable code"
-tags: ["test", "code quality"]
+tags: ["writing", "test", "code quality"]
 private: false
 ---
 

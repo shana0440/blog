@@ -2,7 +2,7 @@
 title: React State Manage for Typescript
 date: "2021-05-16T18:06:56.346Z"
 description: "How to manage state of react"
-tags: ["react", "state", "typescript"]
+tags: ["writing", "react", "state", "typescript"]
 private: false
 ---
 

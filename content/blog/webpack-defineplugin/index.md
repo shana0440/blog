@@ -2,7 +2,7 @@
 title: webpack DefinePlugin
 date: "2020-07-21T08:32:58.996Z"
 description: "Just a short brief about webpack define plugin"
-tags: ["webpack", "env", "environment"]
+tags: ["writing", "webpack", "env", "environment"]
 ---
 
 事情是這樣的，在公司的 js app 上，需要管理各個版本，在 backend 我們可以簡單地使用 environment variable 來切換各個版本間的資料，像是 Sentry DSN, DB Host 的資料等等，但在 front-end，我們既沒辦法讀 environment，使用者也不可能設定 environment variable，更不要說如果我們把所以資料都 bundle 起來，使用者還可以分析程式，取得別的環境的資料。

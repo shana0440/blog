@@ -2,7 +2,7 @@
 title: Electron mac developer id sign
 date: "2020-09-16T17:35:38.199Z"
 description: "How to sign electron app with Developer ID certificate"
-tags: ["electron", "sign", "deployment", "entitlement"]
+tags: ["writing", "electron", "sign", "deployment", "entitlement"]
 ---
 
 > 之前覺得 mas 很麻煩的我真是太天真了 :)

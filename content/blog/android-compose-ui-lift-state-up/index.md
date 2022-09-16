@@ -2,7 +2,7 @@
 title: Android Compose UI lift state up
 date: "2021-02-27T10:17:23.724Z"
 description: "How to share the state in Compose UI"
-tags: ["android", "compose ui", "state management"]
+tags: ["writing", "android", "compose ui", "state management"]
 ---
 
 > 這邊文章是基於 `1.0.0-alpha10`

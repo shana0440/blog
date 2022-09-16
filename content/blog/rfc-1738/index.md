@@ -2,7 +2,7 @@
 title: RFC 1738
 date: "2020-11-14T14:26:07.759Z"
 description: "Let's read some RFC :)"
-tags: ["url", "rfc", "rfc-1738"]
+tags: ["writing", "url", "rfc", "rfc-1738"]
 ---
 
 ## 前言

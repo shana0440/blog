@@ -2,7 +2,7 @@
 title: some thought about typescript
 date: "2022-09-01T02:32:17.379Z"
 description: "My thought about typescript"
-tags: ["typescript"]
+tags: ["writing", "typescript"]
 private: true
 ---
 

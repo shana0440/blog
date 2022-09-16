@@ -2,7 +2,7 @@
 title: Django Deployment
 date: "2021-07-20T15:57:31.368Z"
 description: "stupid me"
-tags: ['python', 'django']
+tags: ["writing", "python", "django"]
 private: false
 ---
 

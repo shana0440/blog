@@ -2,7 +2,7 @@
 title: Powerful typescript
 date: "2022-05-28T13:53:04.369Z"
 description: "here is your description"
-tags: ["typescript"]
+tags: ["writing", "typescript"]
 private: false
 ---
 

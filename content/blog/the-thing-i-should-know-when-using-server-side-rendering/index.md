@@ -2,7 +2,7 @@
 title: The thing I should know when using server-side rendering
 date: "2022-07-07T13:19:58.493Z"
 description: "The note that used to record the problem I occur when working on server-side rendering"
-tags: ["remix", "react", "ssr"]
+tags: ["writing", "remix", "react", "ssr"]
 private: false
 ---
 

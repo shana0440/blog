@@ -2,7 +2,7 @@
 title: Flutter Performance Overview
 date: "2020-02-24T02:25:23.284Z"
 description: "The best practices of flutter rendering"
-tags: ["flutter", "performance", "render"]
+tags: ["writing", "flutter", "performance", "render"]
 ---
 
 簡單註記一下 [Performance best practices](https://flutter.dev/docs/perf/rendering/best-practices) 的內容，讓自己以後再開發的時候可以多注意一些。

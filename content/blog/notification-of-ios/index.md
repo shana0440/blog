@@ -2,7 +2,7 @@
 title: Notification of iOS
 date: "2021-09-05T06:31:36.397Z"
 description: "How to setup notification of iOS"
-tags: ["iOS", "Notification", "APNs"]
+tags: ["writing", "iOS", "Notification", "APNs"]
 private: false
 ---
 

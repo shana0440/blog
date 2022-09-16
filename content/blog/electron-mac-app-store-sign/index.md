@@ -2,7 +2,7 @@
 title: Electron mac app store sign
 date: "2020-09-07T21:20:40.341Z"
 description: "If didn't works don't surprise"
-tags: ["mac app store", "mas", "electron", "sign", "deployment"]
+tags: ["writing", "mac app store", "mas", "electron", "sign", "deployment"]
 ---
 
 最近被公司叫去寫個 electron 的專案，今天來記錄一下再處理 mac app sign 的問題。

@@ -2,7 +2,7 @@
 title: Match all items SQL
 date: "2022-05-28T12:22:42.640Z"
 description: "here is your description"
-tags: ["sql"]
+tags: ["writing", "sql"]
 private: false
 ---
 

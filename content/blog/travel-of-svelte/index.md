@@ -2,7 +2,7 @@
 title: Travel of svelte
 date: "2022-01-24T17:54:39.414Z"
 description: "My experience about svelte"
-tags: ["svelte"]
+tags: ["writing", "svelte"]
 private: false
 ---
 

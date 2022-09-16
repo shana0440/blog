@@ -2,7 +2,7 @@
 title: URL.createObjectURL
 date: "2020-09-07T04:19:35.582Z"
 description: "URL.createObjectURL is deprecated :shocked:"
-tags: ["web", "download", "blob", "file"]
+tags: ["writing", "web", "download", "blob", "file"]
 ---
 
 ## 前情提要

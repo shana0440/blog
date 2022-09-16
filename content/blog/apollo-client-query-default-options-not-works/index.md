@@ -2,7 +2,7 @@
 title: apollo-client query default options not works?
 date: "2020-12-11T19:01:44.526Z"
 description: "A lesson learned"
-tags: ["graphql", "apollo", "react"]
+tags: ["writing", "graphql", "apollo", "react"]
 ---
 
 首先這是一個愚蠢的錯誤，但是花了滿多時間 trace code 才知道問題出在哪裡，在這邊紀錄一下，免得以後忘記。

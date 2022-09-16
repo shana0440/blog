@@ -2,7 +2,7 @@
 title: Testable code
 date: "2020-09-08T16:08:42.007Z"
 description: "How to write a testable code"
-tags: ["test", "golang", "code quality"]
+tags: ["writing", "test", "golang", "code quality"]
 ---
 
 我想要寫這篇想了一陣子，最近看到 COSCUP 有個演講正好講出我心裡所想的，決定在這邊紀錄一下，順帶一提影片是 [談談 go 測試的二三事](https://www.youtube.com/watch?v=4rxMPYZdyHo&list=PLqfib4St70XPWjZqmkE2auXM50140lgut&index=58)
