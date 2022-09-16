@@ -85,8 +85,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const bookmarks = result.data.bookmarks.edges
 
   bookmarks.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const previous =
+      index === bookmarks.length - 1 ? null : bookmarks[index + 1].node
+    const next = index === 0 ? null : bookmarks[index - 1].node
 
     createPage({
       path: `/bookmarks${post.node.fields.slug}`,
