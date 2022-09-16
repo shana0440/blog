@@ -27,9 +27,7 @@ const Layout = ({ children }) => {
         </ul>
         <ul>
           <li>
-            <h4>
-              <ItemHeader>Me</ItemHeader>
-            </h4>
+            <ItemHeader>Me</ItemHeader>
           </li>
           <li>
             <Item to="/bookmarks" icon={<Bookmark />}>
@@ -39,9 +37,7 @@ const Layout = ({ children }) => {
         </ul>
         <ul>
           <li>
-            <h4>
-              <ItemHeader>Links</ItemHeader>
-            </h4>
+            <ItemHeader>Links</ItemHeader>
           </li>
           <li>
             <Item
