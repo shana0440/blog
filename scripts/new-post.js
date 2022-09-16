@@ -13,7 +13,7 @@ const template = `
 title: ${title}
 date: "${new Date().toISOString()}"
 description: "here is your description"
-tags: ["example"]
+tags: ["writing", "bookmark"]
 private: true
 ---
 
