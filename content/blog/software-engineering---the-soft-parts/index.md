@@ -2,7 +2,7 @@
 title: Software Engineering - The Soft Parts
 date: "2022-09-16T17:25:16.210Z"
 description: "here is your description"
-tags: ["bookmark"]
+tags: ["bookmark", "career"]
 private: false
 ---
 

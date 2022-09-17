@@ -2,7 +2,7 @@
 title: Writing better self reviews
 date: "2022-09-16T17:04:04.151Z"
 description: "Let's write a self reviews"
-tags: ["bookmark"]
+tags: ["bookmark", "career"]
 private: false
 ---
 
