@@ -7,8 +7,8 @@ const Post = ({ node, to }) => {
   return (
     <Link
       to={to}
-      className="rounded-md py-1 px-2 mb-1 hover:bg-gray-100 block"
-      activeClassName="bg-gray-100"
+      className="rounded-md py-1 px-2 mb-1 hover:bg-gray-300 block"
+      activeClassName="bg-gray-300"
     >
       <article key={node.fields.slug}>
         <header>

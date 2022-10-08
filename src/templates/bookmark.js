@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Seo from "../components/seo"
-import Tag from "../components/tag"
 import BookmarksIndex from "../pages/bookmarks"
+import Tags from "../components/tags"
 
 const BookmarkTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -25,8 +25,7 @@ const BookmarkTemplate = ({ data, pageContext }) => {
                 {post.frontmatter.title}
               </h1>
               <p>{post.frontmatter.date}</p>
-              {post.frontmatter.tags &&
-                post.frontmatter.tags.map((it, i) => <Tag key={i} tag={it} />)}
+              {post.frontmatter.tags && <Tags tags={post.frontmatter.tags} />}
             </header>
             <section
               className="prose prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-base"

@@ -29,7 +29,6 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
-    "styled-components": "^5.2.0",
     "tabler-icons-react": "^1.54.0",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13",

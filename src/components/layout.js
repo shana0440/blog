@@ -11,7 +11,7 @@ import {
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex">
+    <div className="flex bg-gray-200">
       <nav className="w-72 px-3 border-r border-r-gray-300 h-screen overflow-auto">
         <h3 className="font-bold px-2 mt-5 mb-10">kwguo</h3>
         <ul>
@@ -72,8 +72,8 @@ function Item({ children, icon, to, newTab = false }) {
     <Link
       to={to}
       target={newTab ? "_blank" : "_self"}
-      className="flex justify-between rounded-md py-1 px-2 mb-1 hover:bg-gray-100"
-      activeClassName="bg-gray-100"
+      className="flex justify-between rounded-md py-1 px-2 mb-1 hover:bg-gray-300"
+      activeClassName="bg-gray-300"
     >
       <div className="flex gap-2">
         {icon}
