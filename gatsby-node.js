@@ -104,7 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tags = result.data.tagsGroup.group
 
   // Make tag pages
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     const slug = tag.fieldValue.toLowerCase().replace(/\s/g, "-")
     createPage({
       path: `/tags/${slug}/`,

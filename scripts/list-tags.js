@@ -4,15 +4,15 @@ const path = require("path")
 const dirPath = path.resolve(__dirname, "..", "content", "blog")
 const files = fs
   .readdirSync(dirPath)
-  .map(it => path.resolve(dirPath, it))
-  .flatMap(it => {
+  .map((it) => path.resolve(dirPath, it))
+  .flatMap((it) => {
     const isDir = fs.lstatSync(it).isDirectory()
     if (isDir) {
-      return fs.readdirSync(it).map(file => path.resolve(it, file))
+      return fs.readdirSync(it).map((file) => path.resolve(it, file))
     }
     return [it]
   })
-  .filter(it => it.endsWith(".md"))
+  .filter((it) => it.endsWith(".md"))
 
 function parseTags(content) {
   const lineOfTagsMatches = content.match(/tags: \[.*?\]/i)
@@ -28,7 +28,7 @@ function parseTags(content) {
   return JSON.parse(tagsArray)
 }
 
-const tags = files.flatMap(it => {
+const tags = files.flatMap((it) => {
   const content = fs.readFileSync(it, "utf8")
   const tags = parseTags(content)
   return tags
