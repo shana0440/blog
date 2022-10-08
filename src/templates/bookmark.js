@@ -16,7 +16,7 @@ const BookmarkTemplate = ({ data, pageContext }) => {
         tags={post.frontmatter.tags}
         description={post.frontmatter.description || post.excerpt}
       />
-      <div className="h-screen overflow-auto">
+      <div className="lg:h-full xl:h-screen overflow-auto">
         {/* 65ch is follow the prose max width settings */}
         <div className="py-24 px-5 max-w-[65ch] mx-auto">
           <article>

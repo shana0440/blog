@@ -2,12 +2,12 @@ import React from "react"
 import useKeepScrollPosition from "../hooks/useKeepScrollPosition"
 import Post from "./post"
 
-export default function PostList({ posts, urlPrefix }) {
+export default function PostList({ posts, urlPrefix, className = "" }) {
   const scrollRestoration = useKeepScrollPosition("post-list")
 
   return (
     <ul
-      className="flex flex-col gap-1 h-screen overflow-auto w-96 px-2 py-4 border-r border-r-gray-300"
+      className={`h-full overflow-auto w-96 px-2 py-4 border-r lg:border-r-gray-300 xl:h-screen ${className}`}
       {...scrollRestoration}
     >
       {posts.map(({ node }, i) => (

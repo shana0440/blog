@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-dominant;
+}
+
 .filling-item {
   @apply flex gap-3 items-center text-[#374151] font-normal;
 }

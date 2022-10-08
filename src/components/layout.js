@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="flex flex-col xl:flex-row bg-dominant">
+    <div className="flex flex-col h-screen xl:flex-row">
       <nav className="p-2 border-b border-b-gray-300 flex justify-between items-center relative xl:px-3 xl:block xl:w-72 xl:h-screen xl:border-r xl:border-r-gray-300">
         <h3 className="font-bold px-2 xl:mt-5 xl:mb-10">kwguo</h3>
         <button
@@ -76,7 +76,7 @@ const Layout = ({ children }) => {
           </ul>
         </div>
       </nav>
-      <div className="flex-1">{children}</div>
+      <div className="flex-1 lg:overflow-hidden">{children}</div>
     </div>
   )
 }

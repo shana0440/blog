@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostList from "../components/post_list"
+import PostLayout from "../components/post_layout"
 
 const WritingsIndex = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,10 +35,9 @@ const WritingsIndex = ({ children }) => {
   return (
     <Layout>
       <SEO title="My writings" />
-      <div className="flex">
-        <PostList posts={posts} urlPrefix="/writings" />
-        <main className="flex-1">{children}</main>
-      </div>
+      <PostLayout posts={posts} urlPrefix="/writings">
+        {children}
+      </PostLayout>
     </Layout>
   )
 }
